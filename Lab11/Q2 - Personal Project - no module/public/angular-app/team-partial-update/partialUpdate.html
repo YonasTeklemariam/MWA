@@ -1,0 +1,88 @@
+<h1>Partial Update</h1>
+
+<form ng-hide="vm.message" name="vm.teamForm" ng-submit="vm.partialUpdate()">
+  <label for="name">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      placeholder="Name"
+      ng-model="vm.name"
+      autocapitalize="none"
+    />
+  </div>
+  <div class="form-group">
+    <label for="country">Country</label>
+    <input
+      type="text"
+      class="form-control"
+      id="salary"
+      placeholder="Country"
+      ng-model="vm.country"
+      autocapitalize="none"
+    />
+  </div>
+  <div class="form-group">
+    <label for="city">City</label>
+    <input
+      type="text"
+      class="form-control"
+      id="city"
+      placeholder="City"
+      ng-model="vm.city"
+      autocapitalize="none"
+    />
+  </div>
+  <div class="form-group">
+    <label for="leagueName">League Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="leagueName"
+      placeholder="League Name"
+      ng-model="vm.leagueName"
+      autocapitalize="none"
+    />
+  </div>
+  <div class="form-group">
+    <label for="dateEstablished">Date Established</label>
+    <input
+      type="text"
+      class="form-control"
+      id="dateEstablished"
+      placeholder="Date Established"
+      ng-model="vm.dateEstablished"
+      autocapitalize="none"
+    />
+  </div>
+  <div class="form-group">
+    <label for="stadiumName">Stadium Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="stadiumName"
+      placeholder="Stadium Name"
+      ng-model="vm.stadiumName"
+      autocapitalize="none"
+    />
+  </div>
+  <div class="form-group">
+    <label for="netWorth">Net Worth</label>
+    <input
+      type="netWorth"
+      class="form-control"
+      id="netWorth"
+      placeholder="Net Worth"
+      ng-model="vm.netWorth"
+      autocapitalize="none"
+    />
+  </div>
+  <button type="submit" class="btn btn-success">Update Team</button>
+</form>
+<br />
+<form name="vm.teamForm">
+  <a ng-href="#!/premierLeague"
+    ><button type="Back" class="btn-success">Back</button></a
+  >
+</form>
+
