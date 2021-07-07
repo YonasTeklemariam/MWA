@@ -1,0 +1,110 @@
+<h1>Complete Update</h1>
+
+<form ng-hide="vm.message" name="vm.jobForm" ng-submit="vm.fullUpdate()">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input
+      type="title"
+      class="form-control"
+      id="title"
+      placeholder="Title"
+      ng-model="vm.title"
+      autocapitalize="none"
+    />
+  </div>
+  <div class="form-group">
+    <label for="salary">Salary</label>
+    <input
+      type="salary"
+      class="form-control"
+      id="salary"
+      placeholder="Salary"
+      ng-model="vm.salary"
+      autocapitalize="none"
+    />
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input
+      type="description"
+      class="form-control"
+      id="description"
+      placeholder="Description"
+      ng-model="vm.description"
+      autocapitalize="none"
+    />
+  </div>
+  <div class="form-group">
+    <label for="experience">Experience</label>
+    <input
+      type="experience"
+      class="form-control"
+      id="experience"
+      placeholder="Experience"
+      ng-model="vm.experience"
+      autocapitalize="none"
+    />
+  </div>
+  <div class="form-group">
+    <label for="postDate">Post Date</label>
+    <input
+      type="postDate"
+      class="form-control"
+      id="postDate"
+      placeholder="Post Date"
+      ng-model="vm.postDate"
+      autocapitalize="none"
+    />
+  </div>
+  <div class="form-group">
+    <label for="skills">Skills</label>
+    <input
+      type="skills"
+      class="form-control"
+      id="skills"
+      placeholder="Please put all your skills separated by comma (,)"
+      ng-model="vm.skills"
+      autocapitalize="none"
+    />
+  </div>
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input
+      type="address"
+      class="form-control"
+      id="address"
+      placeholder="Address"
+      ng-model="vm.address"
+      autocapitalize="none"
+    />
+  </div>
+  <div class="form-group">
+    <label for="longitude">Longitude</label>
+    <input
+      type="longitude"
+      class="form-control"
+      id="longitude"
+      placeholder="Longitude"
+      ng-model="vm.longitude"
+      autocapitalize="none"
+    />
+  </div>
+  <div class="form-group">
+    <label for="latitude">Latitude</label>
+    <input
+      type="latitude"
+      class="form-control"
+      id="latitude"
+      placeholder="Latitude"
+      ng-model="vm.latitude"
+      autocapitalize="none"
+    />
+  </div>
+  <button type="submit" class="btn btn-success">Add Job</button>
+</form>
+<br />
+<form name="vm.jobForm" ng-submit="vm.delete()">
+  <a ng-href="#!/jobs"
+    ><button type="Delete" class="btn-success">Back</button></a
+  >
+</form>

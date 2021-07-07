@@ -1,0 +1,46 @@
+<h1>
+  Information about game:
+  <p>{{vm.job.title}}</p>
+</h1>
+<!-- <game-rating stars="{{vm.game.rate}}"></game-rating> -->
+<p>
+  <h3>Title :</h3> 
+  {{vm.job.title}} <br /><br />
+  <h3>Salary :</h3> 
+  {{vm.job.salary}} <br /><br />
+  <h3>Description :</h3> 
+  {{vm.job.description}} <br /><br />
+  <h3>Experience :</h3>  
+  {{vm.job.experience}} <br /><br />
+  <h3>PostDate :</h3>  
+  {{vm.job.postDate}} <br /><br />
+  <h3>Skills :</h3>  
+  {{vm.job.skills}} <br /><br />
+  <h3>Address :</h3> 
+  {{vm.job.location.address}} <br /><br />
+  <h3>Location :</h3> 
+  {{vm.job.location.coordinates[0]}} , {{vm.job.location.coordinates[1]}} <br />
+</p>
+<br />
+
+<form name="vm.jobForm">
+  <a href="#!/jobs/fullUpdate/{{vm.jobId}}"
+    ><button type="Put" class="btn-success">Complete Update</button></a
+  >
+</form>
+<br />
+<form name="vm.jobForm">
+  <a href="#!/jobs/partialUpdate/{{vm.jobId}}"
+    ><button type="Patch" class="btn-success">Partial Update</button></a
+  >
+</form>
+<br />
+<form name="vm.jobForm" ng-submit="vm.delete()">
+  <button type="Delete" class="btn-success">Delete Game</button>
+</form>
+<br />
+<form name="vm.jobForm" ng-submit="vm.delete()">
+  <a ng-href="#!/jobs"
+    ><button type="Delete" class="btn-success">Back</button></a
+  >
+</form>
