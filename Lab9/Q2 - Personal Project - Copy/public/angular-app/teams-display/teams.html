@@ -1,0 +1,67 @@
+<h1>{{vm.title}}</h1>
+<ul>
+  <li ng-repeat="team in vm.teams">
+    <a ng-href="#!/premierLeague/{{team._id}}">{{team.name}}</a>
+  </li>
+</ul>
+
+<form name="vm.teamForm" ng-submit="vm.addTeam()">
+  To add a new game please fill in the fields below: <br />
+  Name:
+  <input
+    type="text"
+    name="name"
+    required
+    ng-model="vm.newTeamName"
+    style="color: black"
+  /><br />
+  Country:
+  <input
+    type="text"
+    name="country"
+    required
+    ng-model="vm.newTeamCountry"
+    style="color: black"
+  /><br />
+  City:
+  <input
+    type="text"
+    name="city"
+    required
+    ng-model="vm.newTeamCity"
+    style="color: black"
+  /><br />
+  League Name:
+  <input
+    type="text"
+    name="leagueName"
+    required
+    ng-model="vm.newTeamLeagueName"
+    style="color: black"
+  /><br />
+  Date Established:
+  <input
+    type="date"
+    name="dateEstablished"
+    required
+    ng-model="vm.newTeamDateEstablished"
+    style="color: black"
+  /><br />
+  Stadium Name:
+  <input
+    type="text"
+    name="stadiumName"
+    required
+    ng-model="vm.newTeamStadiumName"
+    style="color: black"
+  /><br />
+  Net Worth:
+  <input
+    type="text"
+    name="netWorth"
+    required
+    ng-model="vm.newTeamNetWorth"
+    style="color: black"
+  /><br />
+  <button type="submit" class="btn-success">Add Team</button><br />
+</form>

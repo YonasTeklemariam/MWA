@@ -1,0 +1,16 @@
+<h1>
+  Information about team:
+  <p>{{vm.team.name}}</p>
+</h1>
+<p>
+  Name : {{vm.team.name}} <br />
+  Country : {{vm.team.country}} <br />
+  City : {{vm.team.city}} <br />
+  League Name : {{vm.team.leagueName}} <br />
+  Date Established : {{vm.team.dateEstablished}} <br />
+  Stadium Name : {{vm.team.stadiumName}} <br />
+  Net Worth : {{vm.team.netWorth}} <br />
+</p>
+<form name="vm.teamForm" ng-submit="vm.delete()">
+  <button type="Delete" class="btn-success">Delete Team</button><br />
+</form>
