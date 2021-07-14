@@ -1,0 +1,22 @@
+<h1>{{vm.title}}</h1>
+<table class="table">
+  <tr>
+    <th>Time Stamp</th>
+    <th>Level</th>
+    <th>Message</th>
+  </tr>
+
+  <tr ng-repeat="log  in vm.logs ">
+    <td>{{log.timestamp}}</a></td>
+    <td>{{log.level}}</td>
+    <td>{{log.message}}</td>
+  </tr>
+</table>
+
+<!-- <ul>
+  <li ng-repeat="job in vm.jobs">
+    <a ng-href="#!/jobs/{{job._id}}"
+      >{{job.title}} {{" , : "}} {{job.postDate}}</a
+    >
+  </li>
+</ul> -->
