@@ -1,0 +1,14 @@
+<h1>
+  Information about game:
+  <p>{{vm.game.title}} <game-rating stars="{{vm.game.rate}}"></game-rating></p>
+</h1>
+<p>
+  Price: {{vm.game.price | currency}} <br />
+  Minimum Players: {{vm.game.minPlayers}} <br />
+  Maximum Players: {{vm.game.maxPlayers}} <br />
+  Minimum Age: {{vm.game.minAge}} <br />
+  Publisher: {{vm.game.publisher.name}} <br />
+</p>
+<form name="vm.gameForm" ng-submit="vm.delete()">
+  <button type="Delete" class="btn-success">Delete Game</button><br />
+</form>

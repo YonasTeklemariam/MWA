@@ -1,0 +1,88 @@
+<h1>{{vm.title}}</h1>
+<ul>
+  <li ng-repeat="game in vm.games">
+    <a ng-href="#!/games/{{game._id}}">{{game.title}}</a>
+  </li>
+</ul>
+
+<form
+  ng-hide="{{!vm.isLoggedIn()}}"
+  name="vm.gameForm"
+  ng-submit="vm.addGame()"
+>
+  To add a new game please fill in the fields below: <br />
+  Title:
+  <input
+    type="text"
+    name="title"
+    required
+    ng-model="vm.newGameTitle"
+    style="color: black"
+  /><br />
+  Price:
+  <input
+    type="text"
+    name="price"
+    required
+    ng-model="vm.newGamePrice"
+    style="color: black"
+  /><br />
+  Year:
+  <input
+    type="text"
+    name="year"
+    required
+    ng-model="vm.newGameYear"
+    style="color: black"
+  /><br />
+  Rating:
+  <input
+    type="text"
+    name="rating"
+    required
+    ng-model="vm.newGameRating"
+    style="color: black"
+  /><br />
+  Minimum Players:
+  <input
+    type="text"
+    name="minPlayers"
+    required
+    ng-model="vm.newGameMinPlayers"
+    ng-pattern="/^[1-9][0-9]{0,1}$/"
+    style="color: black"
+  />
+  <span
+    ng-show="vm.gameForm.minPlayers.$dirty && vm.gameForm.minPlayers.$invalid"
+    >Minimum players must be at least 1 and no more than 99</span
+  ><br />
+  Maximum Players:
+  <input
+    type="text"
+    name="maxPlayers"
+    required
+    ng-model="vm.newGameMaxPlayers"
+    ng-pattern="/^[1-9][0-9]{0,1}$/"
+    style="color: black"
+  /><span
+    ng-show="vm.gameForm.maxPlayers.$dirty && vm.gameForm.maxPlayers.$invalid"
+    >Maximum players must be at least 1 and no more than 99</span
+  ><br />
+  Minimum Recommended Age:
+  <input
+    type="text"
+    name="maxAge"
+    required
+    ng-model="vm.newGameMinAge"
+    style="color: black"
+  /><br />
+  Designer Name:
+  <input
+    type="text"
+    name="designer"
+    required
+    ng-model="vm.newGameDesigner"
+    style="color: black"
+  /><br />
+  <button type="submit" class="btn-success">Add Game</button><br />
+</form>
