@@ -1,0 +1,8 @@
+for my NPM Project i used WINSTON AND WINSTON-MONGODB packages.
+in this project i created 3 js classes at the back end.
+At the data folder there are 2 new files named logger.js and log-model.js and 1 new js file in the controllers folder
+named logController.js
+there is also a middleware in the app03.js. The middleware start at line 21 to 29 just before calling the router.
+the log will be saved in 2 ways for convenience method. the first one will transport the log file to mongodb and it will also save
+as a file in the same package named as info.log.
+
