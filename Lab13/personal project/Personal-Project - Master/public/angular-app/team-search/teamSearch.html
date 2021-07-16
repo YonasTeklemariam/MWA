@@ -1,0 +1,47 @@
+<!-- <form name="vm.jobForm" ng-submit="vm.search()">
+  
+</form> -->
+
+<section>
+  <h1>
+    <h2><i>search teams</i></h2>
+    <form class="searchform" name="vm.teamForm" ng-submit="vm.search()">
+      <i class="search">
+        <input
+          id="name"
+          ng-model="vm.name"
+          type="text"
+          name="name"
+          placeholder="'search by team name!"
+          autocapitalize="none"
+        />
+      </i>
+      <button type="submit" class="btn btn-success">Search Team</button>
+    </form>
+  </h1>
+</section>
+
+<br />
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Country</th>
+    <th>City</th>
+    <th>League Name</th>
+    <th>Date Established</th>
+    <th>Stadium Name</th>
+    <th>Net Worth</th>
+  </tr>
+
+  <tr ng-repeat="team  in vm.teams " class="search">
+    <td>{{team.name}}</td>
+    <td>{{team.country}}</td>
+    <td>{{team.city}}</td>
+    <td>{{team.leagueName}}</td>
+    <td>{{team.dateEstablished }}</td>
+    <td>{{team.stadiumName}}</td>
+    <td>{{team.netWorth}}</td>
+  </tr>
+</table>
+
+<!-- | filter:search  -->

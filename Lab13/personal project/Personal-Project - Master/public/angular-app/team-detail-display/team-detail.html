@@ -1,0 +1,38 @@
+<h1>
+  Information about team:
+  <p>{{vm.team.name}}</p>
+</h1>
+<p>
+  Name : {{vm.team.name}} <br />
+  Country : {{vm.team.country}} <br />
+  City : {{vm.team.city}} <br />
+  League Name : {{vm.team.leagueName}} <br />
+  Date Established : {{vm.team.dateEstablished}} <br />
+  Stadium Name : {{vm.team.stadiumName}} <br />
+  Net Worth : {{vm.team.netWorth}} <br />
+</p>
+<!-- <form name="vm.teamForm" ng-submit="vm.delete()">
+  <button type="Delete" class="btn-success">Delete Team</button><br />
+</form> -->
+
+<form name="vm.teamForm" ng-hide="{{!vm.isLoggedIn()}}">
+  <a href="#!/teams/fullUpdate/{{vm.teamId}}"
+    ><button type="Put" class="btn-success">Complete Update</button></a
+  >
+</form>
+<br />
+<form name="vm.teamForm" ng-hide="{{!vm.isLoggedIn()}}">
+  <a href="#!/teams/partialUpdate/{{vm.teamId}}"
+    ><button type="Patch" class="btn-success">Partial Update</button></a
+  >
+</form>
+<br />
+<form name="vm.teamForm" ng-submit="vm.delete()" ng-hide="{{!vm.isLoggedIn()}}">
+  <button type="submit" class="btn-success">Delete Game</button>
+</form>
+<br />
+<form name="vm.teamForm">
+  <a ng-href="#!/premierLeague"
+    ><button type="Back" class="btn-success">Back</button></a
+  >
+</form>
